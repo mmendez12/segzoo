@@ -264,7 +264,7 @@ def genic_intergenic(args):
     """
     Prepare the overlap results in Dataframe
     """
-    df = pd.read_csv(args.overlap, sep='\t', header=0, index_col=0)
+    df = pd.read_csv(args.genic, sep='\t', header=0, index_col=0)
     df.sort_index(inplace=True)
     df = df * 100
     df = df.apply(round).astype(int)
@@ -597,6 +597,8 @@ def main(args):
 
     figure.savefig(args.outfile + '.png', bbox_inches='tight', dpi=350)
     figure.savefig(args.outfile + '.pdf', bbox_inches='tight')
+    figure.savefig(args.outfile + '.tif', bbox_inches='tight', dpi=350)
+
 
 
 def parse_args(args):

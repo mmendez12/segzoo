@@ -1,3 +1,6 @@
+1.0.13:
+* fix bug parsing overlap argument in visualization.py
+
 1.0.12:
 * convert GC to G+C
 * add RepeatMasker column
